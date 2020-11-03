@@ -1,0 +1,25 @@
+server:
+  port: 9092
+spring:
+  application:
+    name: spring-boot-mongodb
+  data:
+    mongodb:
+      uri: mongodb://8.129.213.16:27017/demo
+
+# uri=mongodb://name:pass@localhost:27017/dbname:
+# https://www.jianshu.com/p/d86a726be84a
+
+#  datasource:
+#    url: jdbc:mysql://8.129.213.16:3306/ry-vue?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&zeroDateTimeBehavior=convertToNull
+#    username: root
+#    password: 123456
+#    druid:
+#      initial-size: 5
+#      min-idle: 10
+#      max-active: 20
+#      web-stat-filter:
+#        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+#      stat-view-servlet:
+#        login-username: druid
+#        login-password: druid
