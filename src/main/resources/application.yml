@@ -5,7 +5,7 @@ spring:
     name: spring-boot-mongodb
   data:
     mongodb:
-      uri: mongodb://8.129.213.16:27017/demo
+      uri: mongodb://8.129.213.16:27017/backup
 
 # uri=mongodb://name:pass@localhost:27017/dbname:
 # https://www.jianshu.com/p/d86a726be84a
