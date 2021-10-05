@@ -18,12 +18,13 @@ public class CannalClient implements InitializingBean {
     @Override
     public void afterPropertiesSet() throws Exception {
         // 创建链接
-        CanalConnector connector = CanalConnectors.newSingleConnector(new InetSocketAddress("192.168.1.52", 11111), "example", "", "");
+        CanalConnector connector = CanalConnectors.newSingleConnector(new InetSocketAddress("192.168.31.133", 11111), "example", "canal", "canal");
         try {
             //打开连接
             connector.connect();
             //订阅数据库表,全部表
-            connector.subscribe(".*\\..*");
+//            connector.subscribe(".*\\..*");//所有的表
+            connector.subscribe("gn-web\\.order_info,gn-web\\.order_info_issue");
             //回滚到未进行ack的地方，下次fetch的时候，可以从最后一个没有ack的地方开始拿
             connector.rollback();
             while (true) {

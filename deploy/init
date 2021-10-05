@@ -1,0 +1,20 @@
+
+
+#参考文献  https://blog.csdn.net/weixin_43165220/article/details/120157015
+
+#所有的地址都可以连接
+CREATE USER 'canal'@'%' IDENTIFIED BY 'canal';
+GRANT SHOW VIEW, SELECT, REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'canal'@'%';
+# 刷新
+flush privileges;
+
+
+
+#创建用户canal，密码为canal，主机地址为192.168.0.111 才可以连接
+create user 'canal'@106.75.115.170 identified by 'canal';
+
+#SHOW VIEW 查看视图，SELECT 查询，REPLICATION SLAVE、REPLICATION CLIENT 复制，*.* 表示所有库
+GRANT SHOW VIEW, SELECT, REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'canal'@106.75.115.170;
+
+# 刷新
+flush privileges;
